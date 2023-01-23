@@ -6,7 +6,20 @@
 
 export function separateNamesWithAFromRest(array) {
   // Your code goes here...
-
+  let nameA = [];
+  let nameB = [];
+  let totalName = [];
+  for(let i = 0; i< array.length; i++) {
+     if(array[i].includes('a')){
+        nameA.push(array[i]);
+     }
+     if(!array[i].includes('a')) {
+        nameB.push(array[i]);
+     }
+  }
+  totalName.push(nameA);
+  totalName.push(nameB);
+  return totalName;
 }
 
 

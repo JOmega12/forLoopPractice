@@ -5,7 +5,13 @@
 
 export function getAverage(array) {
   // Your code goes here...
+  
 
+  let newAvg = 0;
+for(let i =0; i< array.length; i++){
+   newAvg += array[i]
+}
+  return newAvg/ array.length
 }
 
 
