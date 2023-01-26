@@ -10,10 +10,15 @@ export function separateNamesWithAFromRest(array) {
   let nameB = [];
   let totalName = [];
   for(let i = 0; i< array.length; i++) {
-     if(array[i].includes('a')){
-        nameA.push(array[i]);
+     let nameWithA = false
+     for(let j = 0; j< array[i].length; j++){
+        if(array[i][j] === 'a'){
+           nameWithA = true;
+        } 
      }
-     if(!array[i].includes('a')) {
+     if(nameWithA) {
+        nameA.push(array[i]);
+     } else {
         nameB.push(array[i]);
      }
   }
